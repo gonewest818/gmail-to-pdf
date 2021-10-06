@@ -336,7 +336,7 @@ function processStyleAttributes(html){
  * @return {string} Html with embedded style tags
  */
 function processStyleTags(html){
-    return html.replace(/(<style[^>]*>)(.*?)(?:<\/style>)/gi, function(m, tag, style, end) {
+    return html.replace(/(<style[^>]*>)(.*?)(<\/style>)/gi, function(m, tag, style, end) {
     style = style.replace(/url\((["']?)([^\)]*)\1\)/gi, function(m, q, url) {
       return 'url(' + q + (renderDataUri_(url) || url) + q + ')';
     });
