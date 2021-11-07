@@ -477,7 +477,7 @@ function formatEmails_(emails) {
  * @return {boolean}
  */
 function isa_(obj, classname) {
-  return typeof obj == 'object' && typeof obj.constructor == 'undefined' && obj.toString() == classname;
+  return typeof obj == 'object' && obj.toString() == classname;
 }
 
 /**
